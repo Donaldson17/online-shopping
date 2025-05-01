@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+   
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,41 +20,53 @@
         </nav>
     </header>
 
+
+
     <main>
+        <!-- Cart Section -->
+<h2>Your Cart</h2>
+<ul id="cartItems"></ul>
+<p id="cartTotal">Total: $0.00</p>
+
+<!-- Wishlist Section -->
+<h2>Your Wishlist</h2>
+<ul id="wishlistItems"></ul>
+
         <section id="products">
             <h2>Featured Products</h2>
-            <div class="product-grid js-product-grid">
+            <div class="product-grid">
+
                 <div class="product">
                     <img src="./images/IPHONE 13 PRO.jpg" alt="IPHONE 13 PRO">
                     <h3>iPhone 13 Pro</h3>
                     <p class="price">$134.99</p>
-                    <button onclick="addToCart('Phone', 999.99)">Add to Cart</button>
-                    <button onclick="removeFromCart('Phone', 999.99)">Remove from Cart</button>
-                    <button onclick="addToWishlist('Phone')">Add to Wishlist</button>
+                    <button class="product-button">Add to Cart</button>
+                    <button class="product-button">Remove from Cart</button>
+                    <button class="product-button">Add to Wishlist</button>
                 </div>
                 <div class="product">
                     <img src="./images/travis_scott_dunk.jpg" alt="Shoes">
                     <h3>DEADSTOCK Travis Scott x SB Dunk</h3>
                     <p class="price">$59.99</p>
-                    <button onclick="addToCart('Shoes', 799.99)">Add to Cart</button>
-                    <button onclick="removeFromCart('Shoes',.799)">Remove from Cart</button>
-                    <button onclick="addToWishlist(Shoes)">Add to Wishlist</button>
+                    <button class="product-button">Add to Cart</button>
+                    <button class="product-button">Remove from Cart</button>
+                    <button class="product-button">Add to Wishlist</button>
                 </div>
                 <div class="product">
                     <img src="./images/basketball.jpg" alt="Basketball">
                     <h3>Molten Basketball</h3>
                     <p class="price">$199.99</p>
-                    <button onclick="addToCart('Basketball', 799.99)">Add to Cart</button>
-                    <button onclick="removeFromCart('Basketball', 799.99)">Remove from Cart</button>
-                    <button onclick="addToWishlist('Basketball')">Add to Wishlist</button>
+                    <button class="product-button">Add to Cart</button>
+                    <button class="product-button">Remove from Cart</button>
+                    <button class="product-button">Add to Wishlist</button>
                 </div>
                 <div class="product">
                     <img src="./images/mountainbike.jpg" alt="Bicycle">
                     <h3>Mountain Bike</h3>
                     <p class="price">$79.99</p>
-                    <button onclick="addToCart('Mountain Bike', 799.99)">Add to Cart</button>
-                    <button onclick="removeFromCart('Mountain Bike', 999.99)">Remove from Cart</button>
-                    <button onclick="addToWishlist('Mountain Bike')">Add to Wishlist</button>
+                    <button class="product-button">Add to Cart</button>     
+                    <button class="product-button">Remove from Cart</button>
+                    <button class="product-button">Add to Wishlist</button>
                 </div>
             </div>
 
