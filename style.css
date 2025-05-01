@@ -108,3 +108,7 @@ footer {
     box-shadow: 0 0 5px white;
 }
 /* Responsive Styles */
+.cartTable {
+    width: 100%;
+    border-collapse: collapse;
+}
