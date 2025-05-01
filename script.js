@@ -118,3 +118,17 @@ function clearCart() {
     cart = [];
     updateCart();
 }
+function searchProducts() {
+    const searchInput = document.getElementById("searchInput").value.toLowerCase();
+    const products = document.querySelectorAll(".product");
+
+    products.forEach(product => {
+        const productName = product.querySelector("h3").textContent.toLowerCase();
+        if (productName.includes(searchInput)) {
+            product.style.display = "block";
+        } else {
+            product.style.display = "none";
+        }
+    });
+}
+// Add event listener for search input
