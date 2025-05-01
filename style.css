@@ -76,3 +76,35 @@ button {
     font-size: 18px;
 }
 
+.search{
+    margin: 20px 0;
+text-align: center;
+}
+.searchBar{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid white;
+    width: 200px;
+outline: none;}
+.searchButton{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    font-size: 14px;
+}
+footer {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}
+.searchBar:focus{
+    border: 2px solid white;
+    box-shadow: 0 0 5px white;
+}
+/* Responsive Styles */
