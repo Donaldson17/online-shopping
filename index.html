@@ -10,7 +10,15 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to ShopZone</h1>
+        <header>
+    <div class="logo-title">
+        <img src="./images/logo.png" alt="ShopZone Logo" class="logo-icon">
+        <span class="logo-text">ShopZone</span>
+    </div>
+    <nav>
+
+    </nav>
+</header>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -19,22 +27,23 @@
             </ul>
         </nav>
     </header>
-
-
-
     <main>
-        <!-- Cart Section -->
+        
 <h2>Your Cart</h2>
 <ul id="cartItems"></ul>
 <p id="cartTotal">Total: $0.00</p>
+ <br>
+<button id="goToPayBtn" style="display:none; margin-top:10px;">Go to Pay</button>
 
-<!-- Wishlist Section -->
 <h2>Your Wishlist</h2>
 <ul id="wishlistItems"></ul>
 
+
         <section id="search">
-            <input type="text" id="searchBar" placeholder="Search for products..." onekeyup="searchProducts()">
+            <h2>Search Products</h2>
+            <input type="text" id="searchBar" placeholder="Search for products...">
             <button id="searchButton">Search</button>
+             <div id="suggestions" class="suggestions-box"></div>
         </section>
 
 
@@ -42,39 +51,39 @@
             <h2>Featured Products</h2>
             <div class="product-grid">
 
-                <div class="product">
-                    <img src="./images/IPHONE 13 PRO.jpg" alt="IPHONE 13 PRO">
+                <div class="product"  data-category="phones">
+                    <img src="./images/iphone.png" alt="IPHONE 13 PRO">
                     <h3>iPhone 13 Pro</h3>
                     <p class="price">$134.99</p>
                     <button class="product-button">Add to Cart</button>
                     <button class="product-button">Remove from Cart</button>
                     <button class="product-button">Add to Wishlist</button>
                 </div>
-                <div class="product">
-                    <img src="./images/travis_scott_dunk.jpg" alt="Shoes">
+                <div class="product" data-category="shoes">
+                    <img src="./images/sb travis.png" alt="Shoes">
                     <h3>DEADSTOCK Travis Scott x SB Dunk</h3>
                     <p class="price">$59.99</p>
                     <button class="product-button">Add to Cart</button>
                     <button class="product-button">Remove from Cart</button>
                     <button class="product-button">Add to Wishlist</button>
                 </div>
-                <div class="product">
-                    <img src="./images/Basketball.jpg" alt="Basketball">
-                    <h3>Molten Basketball</h3>
+                <div class="product" data-category="balls">
+                    <img src="./images/mikasa bbal.png" alt="Basketball">
+                    <h3>Mikasa Basketball</h3>
                     <p class="price">$199.99</p>
                     <button class="product-button">Add to Cart</button>
                     <button class="product-button">Remove from Cart</button>
                     <button class="product-button">Add to Wishlist</button>
                 </div>
-                <div class="product">
-                    <img src="./images/mountainbike.jpg" alt="Bicycle">
+                <div class="product" data-category="bikes">
+                    <img src="./images/mtb bike.png" alt="Bicycle">
                     <h3>Mountain Bike</h3>
                     <p class="price">$79.99</p>
                     <button class="product-button">Add to Cart</button>     
                     <button class="product-button">Remove from Cart</button>
                     <button class="product-button">Add to Wishlist</button>
                 </div>
-                <div class="product">
+                <div class="product" data-category="trades">
                     <img src="./images/American express.jpg" alt="Credit Card">
                     <h3>American Express</h3>
                     <p class="price">$1234549.99</p>
@@ -82,30 +91,94 @@
                     <button class="product-button">Remove from Cart</button>
                     <button class="product-button">Add to Wishlist</button>
                     </div>  
-                <div class="product">
-                    <img src="./images/PC setup.jpeg" alt="PC Setup">
+                <div class="product" data-category="electronics">
+                    <img src="./images/pc setup.png" alt="PC Setup">
                     <h3>PC Setup</h3>
                     <p class="price">$59.99</p>
                     <button class="product-button">Add to Cart</button>
                     <button class="product-button">Remove from Cart</button>
                     <button class="product-button">Add to Wishlist</button> 
                     </div>
-                <div class="product">
-                    <img src="./images/Headphones.jpeg" alt="Headphones">
+                <div class="product" data-category="accessories">
+                    <img src="./images/heaadphone.png" alt="Headphones">
                     <h3>Headphones</h3>
                     <p class="price">$9.99</p>
                     <button class="product-button">Add to Cart</button>
                     <button class="product-button">Remove from Cart</button>
                     <button class="product-button">Add to Wishlist</button>
                     </div>  
-                <div class="product">
-                    <img src="./images/Entertainment setup.jpeg" alt="TV n Speakers">
+                <div class="product" data-category="electronics">
+                    <img src="./images/tv nspk.png" alt="TV n Speakers">
                     <h3>Entertainment Setup</h3>
                     <p class="price">$199.99</p>
                     <button class="product-button">Add to Cart</button>
                     <button class="product-button">Remove from Cart</button>
                     <button class="product-button">Add to Wishlist</button> 
             </div>
+            <div class="product" data-category="phones">
+                    <img src="./images/samsung.png" alt="samsung">
+                    <h3>Samsung Galaxy Fold Z</h3>
+                    <p class="price">$79.99</p>
+                    <button class="product-button">Add to Cart</button>     
+                    <button class="product-button">Remove from Cart</button>
+                    <button class="product-button">Add to Wishlist</button>
+                </div>
+                <div class="product" data-category="shoes">
+                    <img src="./images/aiforce1.png" alt="Airforce1">
+                    <h3>Airforce1</h3>
+                    <p class="price">$79.99</p>
+                    <button class="product-button">Add to Cart</button>     
+                    <button class="product-button">Remove from Cart</button>
+                    <button class="product-button">Add to Wishlist</button>
+                </div>
+                <div class="product" data-category="balls">
+                    <img src="/images/mikasa ftb.png" alt="Soccer Ball">
+                    <h3>Mikasa Football</h3>
+                    <p class="price">$79.99</p>
+                    <button class="product-button">Add to Cart</button>     
+                    <button class="product-button">Remove from Cart</button>
+                    <button class="product-button">Add to Wishlist</button>
+                </div>
+                <div class="product"data-category="bikes">
+                    <img src="./images/qd  bike.png" alt="Quad Bike">
+                    <h3>Quad Bike</h3>
+                    <p class="price">$79.99</p>
+                    <button class="product-button">Add to Cart</button>     
+                    <button class="product-button">Remove from Cart</button>
+                    <button class="product-button">Add to Wishlist</button>
+                </div>
+                <div class="product"data-category="trades">
+                    <img src="./images/bitcoin.png" alt="Bitcoin">
+                    <h3>Bitcoin</h3>
+                    <p class="price">$79.99</p>
+                    <button class="product-button">Add to Cart</button>     
+                    <button class="product-button">Remove from Cart</button>
+                    <button class="product-button">Add to Wishlist</button>
+                </div>
+                <div class="product"data-category="accessories">
+                    <img src="./images/ps4.png" alt="Playstation 4">
+                    <h3>Playstation 4</h3>
+                    <p class="price">$79.99</p>
+                    <button class="product-button">Add to Cart</button>     
+                    <button class="product-button">Remove from Cart</button>
+                    <button class="product-button">Add to Wishlist</button>
+                </div>
+                <div class="product"data-category="accessories">
+                    <img src="./images/pods.png" alt="Airpods">
+                    <h3>Ipods</h3>
+                    <p class="price">$79.99</p>
+                    <button class="product-button">Add to Cart</button>     
+                    <button class="product-button">Remove from Cart</button>
+                    <button class="product-button">Add to Wishlist</button>
+                </div>
+                <div class="product"data-category="cloths">
+                    <img src="./images/siut.png" alt="Suit">
+                    <h3>Tuxedo</h3>
+                    <p class="price">$79.99</p>
+                    <button class="product-button">Add to Cart</button>     
+                    <button class="product-button">Remove from Cart</button>
+                    <button class="product-button">Add to Wishlist</button>
+                </div>
 
         </section>
     </main>
@@ -114,7 +187,7 @@
         <p>© 2025 ShopZone | All Rights Reserved</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
 
